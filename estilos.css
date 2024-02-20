@@ -1,0 +1,162 @@
+/* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #d8e2dc; /* Color de fondo similar al de la imagen */
+    margin: 0;
+    padding: 0;
+    text-align: center; /* Centra todo el texto y contenido */
+}
+
+.container {
+    display: flex; /* Cambiado a flex para acomodar diseño responsivo */
+    flex-direction: column; /* Empieza en dirección de columna */
+    max-width: 100%; /* Ajusta el ancho al 100% */
+    margin: auto; /* Centra el contenedor */
+    padding: 20px;
+    box-sizing: border-box; /* Asegura que padding no afecte el ancho total */
+}
+
+.responsive-image {
+    max-width: 60%; /* Limita la imagen para que no sobrepase el contenedor */
+    height: auto; /* Mantiene la proporción */
+    margin-top: 20px; /* Espacio arriba de la imagen */
+    border: 1px solid #333; /* Borde oscuro de 5px */
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); /* Sombra */
+
+}
+
+h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size:xx-large ;
+    text-align: center; /* Alinea el texto al centro */
+    color: #911c1c;
+    width: 95%; /* Asegura que los textos ocupen todo el ancho disponible */
+    margin-bottom: -10px; /* Espacio debajo de los párrafos */
+}
+
+
+h3 {
+/*   font-family: 'Dancing Script', cursive; */
+    text-align: center; /* Alinea el texto al centro */
+    color: #5a2a2a;
+    width: 95%; /* Asegura que los textos ocupen todo el ancho disponible */
+    margin-bottom: -20px; /* Espacio debajo de los párrafos */
+}
+
+
+p {
+    text-align: justify; /* Justificado */
+    color: #717171;
+    width: 90%; /* Asegura que los textos ocupen todo el ancho disponible */
+    line-height: 1,2;
+    margin-bottom: 0px; /* Espacio debajo de los párrafos */
+}
+
+.author-signature {
+    text-align: right; /* Alinea el texto a la derecha */
+    width: 80%; /* Asegura que los textos ocupen todo el ancho disponible */
+}
+
+
+
+
+.author-signature {
+    font-style: italic;
+    margin-top: 30px; /* Espacio arriba de la firma */
+}
+
+/* Estilos para el control de audio */
+.audio-control {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.play-icon {
+    width: 60px;
+    height: 60px;
+}
+
+.progress-container {
+    flex-grow: 1; /* Permite que la barra de progreso ocupe el espacio restante */
+    height: 5px; /* Altura inicial de la barra de progreso */
+    background-color: #ccc; /* Color de fondo de la barra de progreso */
+    position: relative; /* Posicionamiento para el marcador absoluto */
+}
+
+.progress-bar {
+    height: 10px; /* Altura doble cuando el audio está reproduciéndose */
+    background-color: #6d6875; /* Color de la barra de progreso */
+    width: 0; /* Ancho inicial */
+    position: absolute; /* Posicionamiento absoluto dentro de su contenedor */
+    top: 0;
+    left: 0;
+    transition: width 0.5s ease; /* Transición suave para el cambio de ancho */
+}
+
+.progress-marker {
+    height: 10px; /* Altura del marcador */
+    width: 10px; /* Ancho del marcador */
+    border-radius: 50%; /* Hace el marcador circular */
+    background-color: #444; /* Color del marcador */
+    position: absolute; /* Posicionamiento absoluto */
+    top: 0;
+    left: 0;
+    transform: translateX(-50%); /* Centra el marcador en la línea */
+}
+
+
+
+/* Estilos para dispositivos móviles en horizontal */
+@media (orientation: landscape) {
+    .container {
+        flex-direction: row; /* Los elementos se alinean horizontalmente */
+        align-items: stretch; /* Los elementos se estiran para ocupar todo el alto disponible */
+        gap: 20px; /* Espacio entre la imagen y el contenido del texto */
+    }
+
+    .responsive-image {
+        max-width: 50%; /* La imagen ocupa la mitad izquierda */
+        max-height: 100vh; /* Altura máxima ajustada a la vista del dispositivo */
+    }
+
+    .content {
+        width: 50%; /* El contenido ocupa la mitad derecha */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Centra el contenido verticalmente */
+    }
+}
+
+/* Estilos para dispositivos móviles en vertical */
+@media (orientation: portrait) {
+    .responsive-image {
+        max-height: 60vh; /* La imagen ocupa el 40% de la altura de la pantalla */
+        width: auto; /* Ajusta el ancho automáticamente para mantener la proporción */
+        margin: 0px auto; /* Agrega un margen superior e inferior y centra horizontalmente */
+    }
+
+    .content {
+        width: 100%; /* El contenido ocupa el 100% del ancho disponible */
+        padding: 0 20px; /* Añade padding a izquierda y derecha */
+    }
+
+
+    .audio-control {
+        width: 90%; /* Ajusta para ocupar el 90% del ancho de la pantalla en vertical */
+    }
+
+    body {
+        background-image: url('fondo.jpg'); /* Establece la imagen de fondo */
+        background-size: cover; /* Asegura que la imagen de fondo cubra toda la pantalla */
+        background-position: center; /* Centra la imagen de fondo */
+        background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    }
+
+
+
+}
+
