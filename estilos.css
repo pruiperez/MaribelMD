@@ -55,15 +55,10 @@ p {
 .author-signature {
     text-align: right; /* Alinea el texto a la derecha */
     width: 80%; /* Asegura que los textos ocupen todo el ancho disponible */
-}
-
-
-
-
-.author-signature {
     font-style: italic;
     margin-top: 30px; /* Espacio arriba de la firma */
 }
+
 
 /* Estilos para el control de audio */
 .audio-control {
@@ -75,8 +70,8 @@ p {
 }
 
 .play-icon {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
 }
 
 .progress-container {
@@ -129,6 +124,11 @@ p {
         flex-direction: column;
         justify-content: center; /* Centra el contenido verticalmente */
     }
+
+    .audio-control {
+        width: 90%; /* Ajusta para ocupar el 90% del ancho de la pantalla en vertical */
+    }
+
 }
 
 /* Estilos para dispositivos móviles en vertical */
