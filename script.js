@@ -6,8 +6,10 @@ window.addEventListener('DOMContentLoaded', (event) => {
     playButton.addEventListener('click', () => {
         if (audioPlayer.paused) {
             audioPlayer.play();
+            playButton.src = 'pause-icon.png'; // Cambia a icono de pausa
         } else {
             audioPlayer.pause();
+            playButton.src = 'play-icon.png'; // Cambia a icono de reproducción
         }
     });
 
