@@ -53,7 +53,7 @@ p {
 }
 
 .author-signature {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Dancing Script';
     text-align: right; /* Alinea el texto a la derecha */
     width: 80%; /* Asegura que los textos ocupen todo el ancho disponible */
     font-style: italic;
